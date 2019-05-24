@@ -1,6 +1,5 @@
 \documentclass[a4paper,12pt]{article}
 
-
 %\usepackage[utf8]{inputenc}			
 \usepackage[english,brazil]{babel}
 \usepackage{framed}
@@ -19,41 +18,11 @@
 \usepackage{enumitem}
 
 \usepackage[nottoc]{tocbibind} %adiciona referência ao índice
-\usepackage{pgfgantt}
 
-\newif\ifblackandwhite
-\blackandwhitetrue
-
-\usepackage{fontspec}%
-\defaultfontfeatures{Ligatures=TeX}%
-\setmainfont[%
-   Numbers        = OldStyle ,
-   ItalicFont     = LinLibertineOI ,
-   BoldItalicFont = LinLibertineOBI ,
-   BoldFont       = LinLibertineOB ,
-]{LinLibertineO}%
-
-
-\usepackage[hmargin=2cm,vmargin=2.5cm]{geometry}
-\usepackage{etoolbox}
-\usepackage{longtable}%
-\AtBeginEnvironment{longtable}{%
-  \addfontfeature{RawFeature=+tnum;-onum}%  <--- requires LuaTeX
-}
-
-\usepackage{pdflscape}
-%\usepackage[svgnames]{xcolor}
- \usepackage{colortbl}%
+\usepackage{colortbl}%
    \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
 \usepackage{booktabs}
 
-\ifblackandwhite
-  \newcommand{\cheading}[2]{\textbf{#1\hfill #2}}
-  \newcommand{\highest}[1]{\textbf{#1}}% == highest score for question
-\else
-  \newcommand{\cheading}[2]{\textcolor{Maroon}{\textbf{#1\hfill #2}}}
-  \newcommand{\highest}[1]{\textcolor{Maroon}{\textbf{#1}}}%
-\fi
 
 \definecolor{mygray}{rgb}{0.4,0.4,0.4}
 \definecolor{mygreen}{rgb}{0,0.8,0.6}
